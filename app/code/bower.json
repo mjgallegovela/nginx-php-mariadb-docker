@@ -1,0 +1,30 @@
+{
+  "name": "affjet-app",
+  "version": "1.0.0",
+  "authors": [
+    "ZURB <foundation@zurb.com>"
+  ],
+  "description": "Basic template for affjet app",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://app.affjet.com",
+  "devDependencies": {
+
+  },
+  "resolutions": {
+    "jquery": "^2.2.3",
+    "fastclick": "^1.0.6",
+    "bootstrap": "v4.0.0-beta"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+
+  }
+}
