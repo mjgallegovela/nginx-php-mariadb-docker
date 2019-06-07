@@ -1,0 +1,45 @@
+{
+    "name":        "888apps/wp-kickstart",
+    "description": "Kickstart your WordPress site",
+    "type":        "project",
+    "license":     "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url" : "https://wpackagist.org"
+        }
+    ],
+    "config": {
+        "vendor-dir": "content/vendor"
+    },
+    "require": {
+        "johnpbloch/wordpress": "*",
+        "woocommerce/woocommerce": "*",
+        "wpackagist-plugin/cookie-law-info" : "*",
+        "wpackagist-plugin/nginx-cache" : "*",
+        "wpackagist-plugin/wordpress-seo" : "*",
+        "wpackagist-plugin/contact-form-7" : "*",
+        "wpackagist-plugin/addthis-follow" : "*",
+        "wpackagist-plugin/facebook-by-weblizar" : "*",
+        "wpackagist-plugin/twitter" : "*",
+        "wpackagist-plugin/duplicate-post" : "*",
+        "wpackagist-plugin/akismet" : "*",
+        "wpackagist-plugin/autoptimize" : "*",
+        "wpackagist-plugin/cloudflare" : "*",
+        "wpackagist-plugin/ewww-image-optimizer" : "*",
+        "wpackagist-plugin/smartlook-visitor-screen-recording" : "*",
+        "google/apiclient": "*",
+        "facebook/graph-sdk" : "~5.0",
+        "wpackagist-plugin/accelerated-mobile-pages" : "*"
+
+    },
+    "require-dev"  : {
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/plugins/{$name}"   : ["type:wordpress-plugin"],
+            "content/themes/{$name}"    : ["type:wordpress-theme"]
+        }
+    }
+}
