@@ -27,7 +27,7 @@ gulp.task('scripts', function () {
     return merge([jsBlock1, jsBlock2, jsBlock3])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./public/js/'));
+        .pipe(gulp.dest('./assets/js/'));
 });
 
 gulp.task('sass', function () {
@@ -53,7 +53,7 @@ gulp.task('sass', function () {
         .pipe(autoprefixer({browsers: ['last 2 versions', 'ie >= 9']}))
         .pipe(concat('main.min.css'))
         .pipe(minify())
-        .pipe(gulp.dest('./public/css'));
+        .pipe(gulp.dest('./assets/css'));
 });
 
 
@@ -62,5 +62,5 @@ gulp.task('sass', function () {
 gulp.task('build', ['sass', 'scripts']);
 
 gulp.task('watch', function () {
-    gulp.watch('./public/scss/**/*.scss', ['sass']);
+    gulp.watch('./assets/scss/**/*.scss', ['sass']);
 });
