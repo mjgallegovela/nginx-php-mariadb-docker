@@ -1,4 +1,6 @@
 app/code/node_modules
 app/code/composer.lock
 app/code/package-lock.json
-
+app/code/bower_components
+app/code/wp
+dev.env
