@@ -1,3 +1,4 @@
+app/certbot
 app/code/node_modules
 app/code/composer.lock
 app/code/package-lock.json

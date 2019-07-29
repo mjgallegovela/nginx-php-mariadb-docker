@@ -1,5 +1,8 @@
 version: "3.2"
 
+volumes:
+  db:
+
 services:
 
   webserver:
@@ -41,7 +44,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./app/db:/var/lib/mysql
+      - db:/var/lib/mysql
 
   pma:
     image: phpmyadmin/phpmyadmin
