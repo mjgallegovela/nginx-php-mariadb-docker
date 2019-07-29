@@ -1,9 +1,9 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 os="$(uname -s)"
 docker_user=''
-docker_image='node'
-proj_root="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../"
+docker_image='web-build'
+proj_root="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 
 if [[ "$os" == MINGW64* ]]; then
     # Windows requires fuckery of $PWD to get it back into a proper Windows path
@@ -13,5 +13,4 @@ else
     # Unix requires setting the docker --user parameter
     docker_user="--user $(id -u):$(id -g)"
 fi
-
-docker run --rm --volume $proj_root/$PROJECT_PATH:/usr/src/app -w /usr/src/app $docker_user $docker_image npm --loglevel=warn $@
+docker run -ti -v $proj_root/$PROJECT_PATH:/srv $docker_image bash -c "$(echo "npm " $@)"
